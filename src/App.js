@@ -51,7 +51,7 @@ const App = () => {
         </nav>
         <div className='container'>
           <Route exact path='/' component={Home} />
-          <Route exact path='/produtos' component={Produtos} />
+          <Route path='/produtos' component={Produtos} />
           <Route exact path='/sobre' component={Sobre} />
         </div>
       </div>
