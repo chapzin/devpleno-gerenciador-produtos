@@ -1,0 +1,44 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "Sabonete",
+      "catId": 1
+    },
+    {
+      "id": 2,
+      "produto": "Shampoo",
+      "catId": 1
+    },
+    {
+      "id": 3,
+      "produto": "Detergente",
+      "catId": 1
+    },
+    {
+      "id": 4,
+      "produto": "Arroz",
+      "catId": 2
+    },
+    {
+      "id": 5,
+      "produto": "Feijão",
+      "catId": 2
+    },
+    {
+      "id": 6,
+      "produto": "Carne Maminha",
+      "catId": 2
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "categoria": "Limpeza"
+    },
+    {
+      "id": 2,
+      "categoria": "Alimentos"
+    }
+  ]
+}
