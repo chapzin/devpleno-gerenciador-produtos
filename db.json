@@ -39,6 +39,14 @@
     {
       "id": 2,
       "categoria": "Alimentos"
+    },
+    {
+      "categoria": "teste",
+      "id": 3
+    },
+    {
+      "categoria": "abacate",
+      "id": 4
     }
   ]
 }

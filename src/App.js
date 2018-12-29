@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
-import Produtos from './pages/Produtos'
+import ProdutosHome from './pages/ProdutosHome'
 import Sobre from './pages/Sobre'
 
 const App = () => {
@@ -51,7 +51,7 @@ const App = () => {
         </nav>
         <div className='container'>
           <Route exact path='/' component={Home} />
-          <Route path='/produtos' component={Produtos} />
+          <Route path='/produtos' component={ProdutosHome} />
           <Route exact path='/sobre' component={Sobre} />
         </div>
       </div>

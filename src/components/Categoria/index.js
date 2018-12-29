@@ -32,7 +32,7 @@ class Categoria extends Component {
 
   renderProdutos(produto) {
     return (
-      <p className="well" key={produto.id}>
+      <p className="card card-body bg-light" key={produto.id}>
         {produto.produto}
       </p>
     )

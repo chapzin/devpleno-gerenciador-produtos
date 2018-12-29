@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-import ProdutosHome from '../../components/ProdutosHome'
+import Produtos from '../../components/Produtos'
 import Categoria from '../../components/Categoria'
 import api from '../../services/api'
 
-class Produtos extends Component {
+class ProdutosHome extends Component {
   state = {
     categorias: [],
     err: ''
@@ -32,6 +32,18 @@ class Produtos extends Component {
     )
   }
 
+  handleNewCategoria = async key => {
+    if (key.keyCode === 13) {
+      try {
+        await api.post('/categorias', {
+          categoria: this.refs.categoria.value
+        })
+        this.getCategoria()
+        this.refs.categoria.value = ''
+      } catch (err) {}
+    }
+  }
+
   render() {
     const { match } = this.props
     const { categorias } = this.state
@@ -40,10 +52,18 @@ class Produtos extends Component {
         <div className="col-md-2">
           <h3>Categorias</h3>
           <ul>{categorias.map(this.renderCategoria)}</ul>
+          <div className="card card-body bg-light">
+            <input
+              onKeyUp={this.handleNewCategoria}
+              type="text"
+              ref="categoria"
+              placeholder="Nova categoria"
+            />
+          </div>
         </div>
         <div className="col-md-10">
           <h1>Produtos</h1>
-          <Route exact path={match.url} component={ProdutosHome} />
+          <Route exact path={match.url} component={Produtos} />
           <Route path={match.url + '/categoria/:catId'} component={Categoria} />
         </div>
       </div>
@@ -51,4 +71,4 @@ class Produtos extends Component {
   }
 }
 
-export default Produtos
+export default ProdutosHome
