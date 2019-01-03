@@ -47,6 +47,18 @@
     {
       "categoria": "abacate",
       "id": 4
+    },
+    {
+      "categoria": "Zarinha",
+      "id": 5
+    },
+    {
+      "categoria": "Testinho",
+      "id": 6
+    },
+    {
+      "categoria": "Elaine",
+      "id": 7
     }
   ]
 }

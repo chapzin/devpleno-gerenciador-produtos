@@ -54,6 +54,7 @@ class ProdutosHome extends Component {
           <ul>{categorias.map(this.renderCategoria)}</ul>
           <div className="card card-body bg-light">
             <input
+              className="form-control"
               onKeyUp={this.handleNewCategoria}
               type="text"
               ref="categoria"
